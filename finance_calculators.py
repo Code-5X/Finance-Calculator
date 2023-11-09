@@ -24,6 +24,9 @@ def main():
 def calculate_investment():
     principal = float(input("Enter the amount of money you are depositing: "))
     rate = float(input("Enter the interest rate (as a percentage): ")) / 100
+    if rate > 100.00:
+        print("\n Interest rate cannot be above 100%, enter amount that is below")
+
     time = int(input("Enter the number of years you plan on investing for: "))
     
     interest_type = input("Do you want 'simple' or 'compound' interest: ").lower()
